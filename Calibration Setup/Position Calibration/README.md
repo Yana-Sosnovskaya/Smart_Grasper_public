@@ -18,7 +18,7 @@ The folder `./Data Files` contains the *.csv* data files used to generate the po
     - Measured Distance (mm): the distance between the jaws to the neares 0.1 mm as measured by the calipers
     - Nominal Distance (mm): the nominal distance of the block being used for the position calibration. This is the distance written on the block.
     - PWM Value: the 8-bit pulse-width-modulation value that was fed to the motor controller
-    - Force Reading (Counts): the force reading from the Gasper's internal load cell
+    - Force Reading (Counts): the 10-bit force reading from the Gasper's internal load cell
     - Encoder Value (Pulses): the reading from the encoder
 - Multiple data points are gathered at each combination of inputs. Their values are later averaged during the analysis process.
 
