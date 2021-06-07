@@ -167,7 +167,7 @@ def gram_2_newton(grams):
 # from pathlib import Path
 # import force_error_functions as ferr
 
-# csv_files = ['Force_Weight_Comparison_04_30_2021_4.csv']
+# csv_files = ['Force_Weight_Comparison_04_30_2021_0.csv']
 
 # trials = []
 # for filename in csv_files:

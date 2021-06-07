@@ -533,7 +533,7 @@ def bf_external_newtons():
 
     '''
     
-    csv_files = ['Force_Weight_Comparison_04_30_2021_4.csv']
+    csv_files = ['Force_Weight_Comparison_04_30_2021_0.csv']
     
     trials = []
     for filename in csv_files:
