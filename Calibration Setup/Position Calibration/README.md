@@ -24,4 +24,4 @@ The folder `./Data Files` contains the *.csv* data files used to generate the po
 
 ### How to Use:
 
-To generate the calibration function, open `position_surface_fit.py` and select which data sources you want to use by commenting or uncommenting the data file names as appropriate. Then, run the script.
+To generate the calibration function, open `position_surface_fit.py` and select which data sources you want to use by commenting or uncommenting the data file names as appropriate. Then, run the script. The script will return multiple possible fits relating the Grasper force readings and encoder pulses to the Grasper's jaw distance. 
