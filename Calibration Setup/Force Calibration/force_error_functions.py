@@ -3,6 +3,8 @@
 """
 Created on Wed May 19 20:57:15 2021
 
+Updated June 7, 2021
+
 @author: jack
 """
 
@@ -10,14 +12,14 @@ import numpy as np
 
 def fit_error(fit_values, measured_values):
     '''
-    Plots a histogram of the error between the measured positions and the corresponding positions calculated from the surface fit.
+    Finds the difference between the measured values found during calibration and the calculated values found from the fit function.
     
     Parameters
     ----------
     fit_values : TYPE
-        a numpy array consisting of the calculated position values.
+        a numpy array consisting of the calculated values.
     measured_values : numpy array
-        a numpy array consisting of the measured position values.
+        a numpy array consisting of the measured values.
 
     Returns
     -------
