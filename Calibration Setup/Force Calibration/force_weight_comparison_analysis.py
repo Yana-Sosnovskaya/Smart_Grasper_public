@@ -3,9 +3,11 @@
 """
 Created on Mon May 10 12:59:17 2021
 
-Last Modified May 20, 2021
+Last Modified June 7, 2021
 
 @author: jack
+
+Processes the data necessary for relating the external load cell readings to usable force units
 """
 
 import pandas as pd
@@ -120,7 +122,8 @@ def force_weight_plotter(trials, return_best_fit = True):
     
     lc_vals, mass_vals = extract_fw_data(trials)
     
-    newtons = mass_vals * 9.81/1000 #convert grams to newtons
+    #convert grams to newtons
+    newtons = gram_2_newton(mass_vals)
     
     fig1 = plt.figure()
     ax = fig1.add_subplot()
@@ -147,6 +150,22 @@ def force_weight_plotter(trials, return_best_fit = True):
         
         
 def extract_fw_data(trials):
+    '''
+    
+
+    Parameters
+    ----------
+    trials : list of tuples
+        a list of 2D tuples that correspond to data points. The first value in each tuple is the applied force during calibration measured in grams. The second value in each tuple is the average reading from the external force sensor that corresponds to that applied weight.
+
+    Returns
+    -------
+    dv : numpy array
+        a numpy array consisting of the readings from the external load cell. The nth entry in "dv" is the force reading that corresponds to the weight in the nth entry in "grams".
+    grams : numpy array
+        a numpy array consisting of the mass hanging from the external load cell measured in grams. The nth entry in "grams" is the weight that led to the force reading in the nth entry in "dv".
+
+    '''
     
     dv = np.zeros(len(trials))
     grams = np.zeros(len(trials))
@@ -158,6 +177,20 @@ def extract_fw_data(trials):
     return dv, grams
 
 def gram_2_newton(grams):
+    '''
+    Converts grams of force to newtons of force.
+    
+    Parameters
+    ----------
+    grams : numpy array
+        a numpy array consisting of force measured in grams.
+
+    Returns
+    -------
+    numpy array
+        a numpy array consisting of the values in "grams" converted to the corresponding values in newtons.
+
+    '''
     return grams*9.81/1000
 
 
