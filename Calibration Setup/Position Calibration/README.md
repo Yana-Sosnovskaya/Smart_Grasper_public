@@ -4,7 +4,7 @@ This contains the code necessary for calibrating the Grasper's position (jaw dis
 
 ### Files
 
-The `position_surface_fit.py` file is the main interface for the user. It is the script that uses the data from the files in `./Data Files` and uses it to generate an best fit equation that maps the encoder and force readings to a jaw distance in *mm*.
+The `position_surface_fit.py` file is the main interface for the user. It is the script that uses the data from the files in `./Data Files` and uses it to generate a best fit equation that maps the encoder and force readings to a jaw distance in *mm*.
 - This script relies on the files in the `./Data Files` folder and on the `position_data_processing_script.py` script
 - To generate the calibration function, open `position_surface_fit.py` and select which data sources you want to use by commenting or uncommenting the file names as appropriate. Then, run the script.
 
