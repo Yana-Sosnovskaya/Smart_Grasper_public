@@ -1,6 +1,6 @@
 # Force Calibration
 
-This contains the code necessary for calibrating internal grasper force sensor. It also contains the data files resulting from this calibration process. 
+This contains the code necessary for determining the force applied by the Grasper's jaws (measured in newtons). It also contains the data files resulting from this calibration process. 
 
 ### Scripts
 
